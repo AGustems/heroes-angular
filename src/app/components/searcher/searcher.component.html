@@ -1,21 +1,28 @@
 <h1>Searching... <small>{{term}}</small></h1>
 <hr/>
-<div class="card-columns">
-
-<div
-    class="card animated fadeIn fast"
-    *ngFor="let hero of heroes; let i = index">
-    <img class="card-img-top" [src]="hero.img" [alt]="hero.name">
-        <div class="card-body">
-            <h5 class="card-title">{{hero.name}}</h5>
-            <p class="card-text">{{hero.bio}}</p>
-            <p class="card-text">
-                <small class="text-muted">{{hero.appearance}}</small>
-            </p>
-            <button
-                (click)="seeHero(hero.name)"
-                type="button"
-                class="btn btn-outline-primary btn-block">Learn More</button>
+<div *ngIf="heroes.length === 0" class="row animated fadeIn fast">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            There are no results for {{term}}
         </div>
+    </div>
+</div>
+
+<div class="card-columns">
+    <div
+        class="card animated fadeIn fast"
+        *ngFor="let hero of heroes; let i = index">
+        <img class="card-img-top" [src]="hero.img" [alt]="hero.name">
+            <div class="card-body">
+                <h5 class="card-title">{{hero.name}}</h5>
+                <p class="card-text">{{hero.bio}}</p>
+                <p class="card-text">
+                    <small class="text-muted">{{hero.appearance}}</small>
+                </p>
+                <button
+                    (click)="seeHero(hero.name)"
+                    type="button"
+                    class="btn btn-outline-primary btn-block">Learn More</button>
+            </div>
     </div>
 </div>
