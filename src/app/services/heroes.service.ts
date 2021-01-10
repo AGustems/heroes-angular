@@ -52,34 +52,35 @@ export class HeroesService {
             house: "DC"
         }, {
             name: "Spider-Man",
-            bio: "Tras ser mordido por una araña radiactiva, obtuvo los siguientes poderes sobrehu" +
-                    "manos, una gran fuerza, agilidad, poder trepar por paredes. La fuerza de Spider-" +
-                    "Man le permite levantar 10 toneladas o más. Gracias a esta gran fuerza Spider-Ma" +
-                    "n puede realizar saltos íncreibles. Un \"sentido arácnido\", que le permite sabe" +
-                    "r si un peligro se cierne sobre él, antes de que suceda. En ocasiones este puede" +
-                    " llevar a Spider-Man al origen del peligro.",
+            bio: "Peter Parker becomes Spider-man after he is bitten by a radioactive spider. Pete" +
+                    "r Parker was simply a high school student living with his Aunt May and Uncle Ben" +
+                    ". Once bitten by the spider Peter develops superhero strength and the ability to" +
+                    " cling to ceilings and walls like a spider. He also invents his own webbing tool" +
+                    "s. After failing to stop the thief that would go on to rob and kill his Uncle Be" +
+                    "n, Peter Parker decides it is his responsibility to use his power for good.",
             img: "assets/img/spiderman.png",
             appearance: "1962-08-01",
             house: "Marvel"
         }, {
             name: "Wolverine",
-            bio: "En el universo ficticio de Marvel, Wolverine posee poderes regenerativos que pue" +
-                    "den curar cualquier herida, por mortal que ésta sea, además ese mismo poder hace" +
-                    " que sea inmune a cualquier enfermedad existente en la Tierra y algunas extrater" +
-                    "restres . Posee también una fuerza sobrehumana, que si bien no se compara con la" +
-                    " de otros superhéroes como Hulk, sí sobrepasa la de cualquier humano.",
+            bio: "He is a mutant who possesses animal-keen senses, enhanced physical capabilities," +
+                    " a powerful regenerative ability known as a healing factor, and three retractabl" +
+                    "e claws in each hand. Wolverine has been depicted variously as a member of the X" +
+                    "-Men, Alpha Flight, and the Avengers.",
             img: "assets/img/wolverine.png",
             appearance: "1974-11-01",
             house: "Marvel"
         }
     ];
 
-    constructor() {
-        console.log('Service ready to go!')
-    }
+    constructor() {}
 
     public getHeroes() : Hero[] {
         return this.heroes
+    }
+
+    public getHero(index : number) : object{
+        return this.heroes[index]
     }
 }
 
