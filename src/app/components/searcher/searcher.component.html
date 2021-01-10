@@ -1,6 +1,4 @@
-<h1>
-    <small>Marvel & DC</small>
-    Heroes</h1>
+<h1>Searching... <small>{{term}}</small></h1>
 <hr/>
 <div class="card-columns">
 
@@ -15,7 +13,7 @@
                 <small class="text-muted">{{hero.appearance}}</small>
             </p>
             <button
-                (click)="seeHero(i)"
+                (click)="seeHero(hero.name)"
                 type="button"
                 class="btn btn-outline-primary btn-block">Learn More</button>
         </div>
